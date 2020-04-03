@@ -45,7 +45,7 @@ const getSlideClasses = spec => {
     "slick-cloned": slickCloned,
     "slick-current": slickCurrent // dubious in case of RTL
   };
-  classes[spec.slidesToShow] = true;
+  classes["slick-max-" + spec.slidesToShow] = true;
   return classes;
 };
 
