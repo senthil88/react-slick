@@ -4372,13 +4372,15 @@
           }
 
           var slickCurrent = index === spec.currentSlide;
-          return {
+          var classes = {
             "slick-slide": true,
             "slick-active": slickActive,
             "slick-center": slickCenter,
             "slick-cloned": slickCloned,
             "slick-current": slickCurrent // dubious in case of RTL
           };
+          classes[spec.slidesToShow] = true;
+          return classes;
         };
 
         var getSlideStyle = function getSlideStyle(spec) {
